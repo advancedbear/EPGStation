@@ -39,7 +39,7 @@ class Server extends Base {
         // basic auth
         const basicAuthConfig = config.basicAuth;
         if (typeof basicAuthConfig !== 'undefined') {
-            this.app.use(BasicAuth(basicAuthConfig.user, basicAuthConfig.password));
+            this.app.use(BasicAuth(basicAuthConfig));
         }
 
         // read pkg
